@@ -1,0 +1,15 @@
+//syntax = "proto3";
+package network;
+
+
+// -----
+// 账号登录
+// -----
+message cs_second{
+    // 账号信息
+	/// <summary>
+  	/// 这是字段foo的注释
+  	/// </summary>
+	optional string account = 1 [default = "123"];		// 账号
+	optional string password = 2;       // 密码
+}

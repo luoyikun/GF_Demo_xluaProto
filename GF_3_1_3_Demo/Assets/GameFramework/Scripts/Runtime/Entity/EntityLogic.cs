@@ -67,7 +67,7 @@ namespace UnityGameFramework.Runtime
         /// 实体初始化。
         /// </summary>
         /// <param name="userData">用户自定义数据。</param>
-        protected internal virtual void OnInit(object userData)
+        public virtual void OnInit(object userData)
         {
             if (CachedTransform == null)
             {

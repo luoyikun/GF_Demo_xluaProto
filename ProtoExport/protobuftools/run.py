@@ -70,8 +70,8 @@ def main():
 	print("proto_path:"+proto_path)
 	print("output_path:"+output_path)
 	protoc_path = os.getcwd()+"/protoc"
-	# export_cs()
-	# export_py()
+	export_cs()
+	export_py()
 	export_pb()
 	pass
 

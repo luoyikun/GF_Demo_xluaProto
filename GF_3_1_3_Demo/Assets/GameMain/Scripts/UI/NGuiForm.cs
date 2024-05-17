@@ -96,7 +96,7 @@ public abstract class NGuiForm : UIFormLogic
         Destroy(go);
     }
 
-    protected internal override void OnInit(object userData)
+     protected override void OnInit(object userData)
     {
         base.OnInit(userData);
 
@@ -132,7 +132,7 @@ public abstract class NGuiForm : UIFormLogic
         }
     }
 
-    protected internal override void OnOpen(object userData)
+     protected override void OnOpen(object userData)
     {
         base.OnOpen(userData);
 
@@ -149,44 +149,44 @@ public abstract class NGuiForm : UIFormLogic
     {
 
     }
-    protected internal override void OnPause()
+     protected override void OnPause()
     {
         base.OnPause();
     }
 
-    protected internal override void OnResume()
+     protected override void OnResume()
     {
         base.OnResume();
 
     }
 
-    protected internal override void OnCover()
+     protected override void OnCover()
     {
         base.OnCover();
     }
 
-    protected internal override void OnReveal()
+     protected override void OnReveal()
     {
         base.OnReveal();
     }
 
-    protected internal override void OnRefocus(object userData)
+     protected override void OnRefocus(object userData)
     {
         base.OnRefocus(userData);
     }
 
-    protected internal override void OnUpdate(float elapseSeconds, float realElapseSeconds)
+     protected override void OnUpdate(float elapseSeconds, float realElapseSeconds)
     {
         base.OnUpdate(elapseSeconds, realElapseSeconds);
     }
 
-    protected internal override void OnClose(object userData)
+     protected override void OnClose(object userData)
     {
         base.OnClose(userData);
     }
 
 
-    protected internal override void OnDepthChanged(int uiGroupDepth, int depthInUIGroup)
+     protected override void OnDepthChanged(int uiGroupDepth, int depthInUIGroup)
     {
         int oldDepth = Depth;
         base.OnDepthChanged(uiGroupDepth, depthInUIGroup);

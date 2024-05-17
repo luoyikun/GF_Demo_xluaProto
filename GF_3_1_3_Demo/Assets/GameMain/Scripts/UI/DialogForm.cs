@@ -23,7 +23,7 @@ public class DialogForm : NGuiForm
     private DialogParams _dialogParams;
     private object _userData;
 
-    protected internal override void OnInit(object userData)
+     protected override void OnInit(object userData)
     {
         base.OnInit(userData);
 
@@ -47,7 +47,7 @@ public class DialogForm : NGuiForm
         _messageText = CachedTransform.Find("Background/Message").GetComponent<UILabel>();
     }
 
-    protected internal override void OnOpen(object userData)
+     protected override void OnOpen(object userData)
     {
         base.OnOpen(userData);
 

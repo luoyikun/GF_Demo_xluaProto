@@ -8,6 +8,7 @@
 //------------------------------------------------------------------------------
 
 // Generated from: login.proto
+// Note: requires additional types generated from: second.proto
 namespace network
 {
   [global::System.Serializable, global::ProtoBuf.ProtoContract(Name=@"cs_login")]
@@ -28,10 +29,24 @@ namespace network
     {
       get { return _password; }
       set { _password = value; }
+    }
+    private string _add;
+    [global::ProtoBuf.ProtoMember(3, IsRequired = true, Name=@"add", DataFormat = global::ProtoBuf.DataFormat.Default)]
+    public string add
+    {
+      get { return _add; }
+      set { _add = value; }
+    }
+    private network.cs_second _second;
+    [global::ProtoBuf.ProtoMember(4, IsRequired = true, Name=@"second", DataFormat = global::ProtoBuf.DataFormat.Default)]
+    public network.cs_second second
+    {
+      get { return _second; }
+      set { _second = value; }
     } 
 	public override void Clear()
 	{   
-	  //TODO
+	  //TODO 返回引用池中需要把成员变量设置为默认值
 	}
 	
   }
@@ -57,7 +72,7 @@ namespace network
     } 
 	public override void Clear()
 	{   
-	  //TODO
+	  //TODO 返回引用池中需要把成员变量设置为默认值
 	}
 	
   }

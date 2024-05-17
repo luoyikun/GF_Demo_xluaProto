@@ -26,7 +26,7 @@
      	<xsl:when test="starts-with($className,'sc_') or starts-with($className,'cs_')"> 
 	public override void Clear()
 	{   
-	  //TODO
+	  //TODO 返回引用池中需要把成员变量设置为默认值
 	}
 	<!-- public override Id -->
 	<!-- { -->
@@ -36,5 +36,8 @@
      	<xsl:otherwise></xsl:otherwise>
      </xsl:choose>
   </xsl:template>
+
+
+ 
 
 </xsl:stylesheet>

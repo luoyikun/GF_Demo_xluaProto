@@ -15,7 +15,7 @@ public class LaunchForm : NGuiForm
 {
     private UILabel m_Text;
 
-    protected internal override void OnInit(object userData)
+     protected override void OnInit(object userData)
     {
         base.OnInit(userData);
 
@@ -31,7 +31,7 @@ public class LaunchForm : NGuiForm
         m_Text.text = evt.Tips;
     }
 
-    protected internal override void OnOpen(object userData)
+     protected override void OnOpen(object userData)
     {
         base.OnOpen(userData);
 
@@ -43,7 +43,7 @@ public class LaunchForm : NGuiForm
         base.OnOpenComplete();
     }
 
-    protected internal override void OnClose(object userData)
+     protected override void OnClose(object userData)
     {
         GameManager.Event.Unsubscribe(LaunchFormUpdateTipsEventArgs.EventId, OnUpdateTips);
 

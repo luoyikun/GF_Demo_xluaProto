@@ -194,7 +194,7 @@ public class LuaComponent : GameFrameworkComponent
         LoadAssetCallbacks callBacks = new LoadAssetCallbacks(OnLoadProtoPbAssetSuccess);
 
         string assetName = AssetUtility.GetProtoPbAsset(protoName);
-
+        Log.Info("加载protoPb：{0}", assetName);
         if (m_CacheProtoPbDict.ContainsKey(protoName))
         {
             m_EventComponent.Fire(this, ReferencePool.Acquire<LoadProtoPbSuccessEventArgs>().Fill(assetName, protoName, m_CacheProtoPbDict[protoName]));

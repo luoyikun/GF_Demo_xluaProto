@@ -16,7 +16,7 @@ public class LoadingForm : NGuiForm
 {
     private UISlider m_Slider;
 
-    protected internal override void OnInit(object userData)
+     protected override void OnInit(object userData)
     {
         base.OnInit(userData);
 
@@ -28,12 +28,12 @@ public class LoadingForm : NGuiForm
         m_Slider.value = 0;
     }
 
-    protected internal override void OnOpen(object userData)
+     protected override void OnOpen(object userData)
     {
         base.OnOpen(userData);
     }
 
-    protected internal override void OnClose(object userData)
+     protected override void OnClose(object userData)
     {
         GameManager.Event.Unsubscribe(LoadSceneUpdateEventArgs.EventId, OnLoadSceneUpdate);
 

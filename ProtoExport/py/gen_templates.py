@@ -1,6 +1,7 @@
 #coding=utf-8
 import os
 
+#生成网络id.cs
 def gen_cs_template():
 	global root_path
 	template_name = "PacketId.cs.template"
@@ -19,6 +20,7 @@ def gen_cs_template():
 		output_content = source.replace("#0",proto_content)
 		output_file.write(output_content)
 
+#读取txt中写的网络id
 def read_proto_id():
 	global root_path,proto_id_dict
 	proto_id_name = "ProtoId.txt"

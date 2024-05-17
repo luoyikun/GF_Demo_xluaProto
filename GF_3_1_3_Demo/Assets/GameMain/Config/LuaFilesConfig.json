@@ -5,8 +5,8 @@
 {"LuaName":"Forms/Login/LoginItem","AssetName":"Assets/XLua/Resources/Forms/Login/LoginItem.lua.txt"}
 {"LuaName":"Manager/LuaFormManager","AssetName":"Assets/XLua/Resources/Manager/LuaFormManager.lua.txt"}
 {"LuaName":"Manager/LuaNetworkManager","AssetName":"Assets/XLua/Resources/Manager/LuaNetworkManager.lua.txt"}
-{"LuaName":"Perf/memory","AssetName":"Assets/XLua/Resources/Perf/memory.lua.txt"}
-{"LuaName":"Perf/profiler","AssetName":"Assets/XLua/Resources/Perf/profiler.lua.txt"}
+{"LuaName":"perf/memory","AssetName":"Assets/XLua/Resources/perf/memory.lua.txt"}
+{"LuaName":"perf/profiler","AssetName":"Assets/XLua/Resources/perf/profiler.lua.txt"}
 {"LuaName":"tdr/tdr","AssetName":"Assets/XLua/Resources/tdr/tdr.lua.txt"}
 {"LuaName":"Util/Functions","AssetName":"Assets/XLua/Resources/Util/Functions.lua.txt"}
 {"LuaName":"Util/util","AssetName":"Assets/XLua/Resources/Util/util.lua.txt"}

@@ -2,20 +2,20 @@ rem 生成proto输出文件
 cd py
 python gen_templates.py
 
-cd ..
+//cd ..
 
 cd protobuftools
 python run.py
 
 rem 生成的cs输出路径
-set cs_file=E:\GitProjects\GF_Demo\ProtoExport\output\csharp
-set py_file=E:\GitProjects\GF_Demo\ProtoExport\output\python
-set pb_file=E:\GitProjects\GF_Demo\ProtoExport\output\pb
+set cs_file=E:\GithubProjects\GameFramework\GF_Demo_xluaProto\ProtoExport\output\csharp
+set py_file=E:\GithubProjects\GameFramework\GF_Demo_xluaProto\ProtoExport\output\python
+set pb_file=E:\GithubProjects\GameFramework\GF_Demo_xluaProto\ProtoExport\output\pb
 
 rem 项目路径
-set project_cs=E:\GitProjects\GF_Demo\GF_3_1_3_Demo\Assets\GameMain\Scripts\Network\Packet\ProtoGen
-set project_py=E:\GitProjects\GF_Demo\PythonServer\pb
-set project_pb=E:\GitProjects\GF_Demo\GF_3_1_3_Demo\Assets\XLua\Resources\3rd\pb
+set project_cs=E:\GithubProjects\GameFramework\GF_Demo_xluaProto\GF_3_1_3_Demo\Assets\GameMain\Scripts\Network\Packet\ProtoGen
+set project_py=E:\GithubProjects\GameFramework\GF_Demo_xluaProto\PythonServer\pb
+set project_pb=E:\GithubProjects\GameFramework\GF_Demo_xluaProto\GF_3_1_3_Demo\Assets\XLua\Resources\3rd\pb
 
 rem 清理项目旧文件夹
 rd /s /q %project_cs%

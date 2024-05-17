@@ -82,7 +82,8 @@ public  class ProcedureLoadProto:GameProcedureBase
         //调用lua方法，解析proto
         LuaTable luaTable =GameManager.Lua.GetClassLuaTable(m_LuaNetworkManagerName, m_ManagerClass);
         GameManager.Lua.CallLuaFunction(luaTable, "LoadProtoPb", m_CacheProtoPbData["login"]);
-
+        //测试lua中读单独文件读不到
+        //GameManager.Lua.CallLuaFunction(luaTable, "LoadProtoPbFile", "3rd/pb/login.txt");
         //Test
         GameManager.Lua.CallLuaFunction(luaTable, "TestProto");
 
@@ -126,6 +127,7 @@ public  class ProcedureLoadProto:GameProcedureBase
         m_LoadedFlag[evt.ProtoName] = true;
 
         m_CacheProtoPbData[evt.ProtoName] = evt.ProtoBytes;
+        Log.Info("OnLoadProtoPbSuccess:{0}", evt.ProtoName);
     }
 }
 

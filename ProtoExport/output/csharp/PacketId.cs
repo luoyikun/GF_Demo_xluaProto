@@ -11,5 +11,6 @@ public enum PacketId
 {
 	CS_LOGIN=1001,
 	SC_LOGIN=1002,
+	CS_SECOND=1003,
 	
 }

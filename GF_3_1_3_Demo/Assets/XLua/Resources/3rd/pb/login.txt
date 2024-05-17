@@ -1,9 +1,10 @@
 
-q
-login.protonetwork"-
+~
+login.protonetwork":
 cs_login
 account (	
-password (	"*
+password (	
+add (	"*
 sc_login
 result (
 reason (	

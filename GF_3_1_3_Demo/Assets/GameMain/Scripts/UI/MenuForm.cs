@@ -19,7 +19,7 @@ public class MenuForm : NGuiForm
     private UIButton _btn;
     private ProcedureMenu _procedure;
 
-    protected internal override void OnInit(object userData)
+     protected override void OnInit(object userData)
     {
         base.OnInit(userData);
 
@@ -39,7 +39,7 @@ public class MenuForm : NGuiForm
     //    Log.Info("C# receive:{0}", evt.Param[1]);
     //}
 
-    protected internal override void OnOpen(object userData)
+     protected override void OnOpen(object userData)
     {
         base.OnOpen(userData);
 

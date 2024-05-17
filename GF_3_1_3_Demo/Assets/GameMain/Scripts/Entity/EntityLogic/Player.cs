@@ -16,7 +16,7 @@ public class Player : GameEntity
 
     }
 
-    protected internal override void OnInit(object userData)
+     public override void OnInit(object userData)
     {
         base.OnInit(userData);
 
@@ -27,18 +27,18 @@ public class Player : GameEntity
         }
     }
 
-    protected internal override void OnShow(object userData)
+     protected override void OnShow(object userData)
     {
         base.OnShow(userData);
     }
 
-    protected internal override void OnHide(object userData)
+     protected override void OnHide(object userData)
     {
         base.OnHide(userData);
 
     }
 
-    protected internal override void OnUpdate(float elapseSeconds, float realElapseSeconds)
+     protected override void OnUpdate(float elapseSeconds, float realElapseSeconds)
     {
         base.OnUpdate(elapseSeconds, realElapseSeconds);
 

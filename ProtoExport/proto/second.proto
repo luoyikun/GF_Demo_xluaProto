@@ -1,0 +1,12 @@
+//syntax = "proto3";
+package network;
+
+
+// -----
+// 账号登录
+// -----
+message cs_second{
+    // 账号信息
+	required string account = 1;		// 账号
+	required string password = 2;       // 密码
+}

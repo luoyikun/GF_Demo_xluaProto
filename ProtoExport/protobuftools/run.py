@@ -8,7 +8,7 @@ global output_path
 # 导出cs文件
 def export_cs():
 	global proto_path
-	protogen_path = os.getcwd()+"/protogen.exe"
+	protogen_path = os.getcwd()+"/protogen.exe" #protogen.exe的全路径
 
 	# protogen 生成CS时，必须将当前目录改到proto所在目录,参数中路径必须用相对路径
 	os.chdir(proto_path)
@@ -55,6 +55,7 @@ def export_pb():
 			pb_file = os.path.join(output_path,"pb",file.replace("proto","txt")) 
 			proto_file = os.path.join(proto_path,file)
 			cmd = "{0} --proto_path={1} -o {2} {3}".format(protoc_path,proto_path,pb_file,proto_file)
+			#cmd = 'E:\\GithubProjects\\GameFramework\\GF_Demo_xluaProto\\ProtoExport\\protobuftools/protoc --proto_path=E:\\GithubProjects\\GameFramework\\GF_Demo_xluaProto\\ProtoExport/proto/ -o E:\\GithubProjects\\GameFramework\\GF_Demo_xluaProto\\ProtoExport/output/pb\\login.txt E:\\GithubProjects\\GameFramework\\GF_Demo_xluaProto\\ProtoExport/proto/login.proto'
 			os.system(cmd)		
 
 	# 生成proto配置文件

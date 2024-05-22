@@ -176,7 +176,7 @@ public class NetworkChannelHelper : GameFramework.Network.INetworkChannelHelper
             return null;
         }
 
-        // 恐怖的 GCAlloc，这里是例子，不做优化
+        // 恐怖的 GCAlloc，这里是例子，不做优化。网络发送字节流可以复用吗
         using (MemoryStream stream = new MemoryStream())
         {
             //跳过消息头长度（8）的位置开始序列化消息内容
@@ -194,6 +194,7 @@ public class NetworkChannelHelper : GameFramework.Network.INetworkChannelHelper
 
             //方式1：直接写入字节数据id+packetLen
             stream.Write(BitConverter.GetBytes(header.Id), 0, 4);
+            //steam写入，会自动增加position，这里传入参数offset是指byte[] 中起始位置，到写入长度
             stream.Write(BitConverter.GetBytes(header.PacketLength), 0, 4);
             //方式2：用头部结构体序列化进去（暂时没测通过）
             //Serializer.SerializeWithLengthPrefix(stream, header, PrefixStyle.Fixed32);

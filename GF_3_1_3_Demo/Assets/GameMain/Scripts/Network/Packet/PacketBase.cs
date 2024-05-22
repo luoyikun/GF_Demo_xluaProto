@@ -8,6 +8,7 @@ using System;
 /// </summary>
 public abstract class PacketBase : Packet,IExtensible
 {
+    private int m_id = -1;
     private IExtension m_ExtensionObject;
 
     public PacketBase()
@@ -34,9 +35,13 @@ public abstract class PacketBase : Packet,IExtensible
     {
         get 
         {
-            string className = this.GetType().Name.ToUpper();
-            int id = (int)Enum.Parse(typeof(PacketId),className);
-            return id;
+            if (m_id == -1)
+            {
+                //反射，影响性能
+                string className = this.GetType().Name.ToUpper();
+                int m_id = (int)Enum.Parse(typeof(PacketId), className);
+            }
+            return m_id;
         }
     }
 

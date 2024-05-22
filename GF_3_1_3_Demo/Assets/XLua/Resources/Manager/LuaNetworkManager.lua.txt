@@ -32,3 +32,13 @@ function LuaNetworkManager.TestProto(  )
     dump(decode_data)
     print("decode_data.account:"..decode_data.account)
 end
+
+
+---TestDecodeLoginFromCS 测试cs序列化后字节流到lua反序列化
+---@param bytes table
+function LuaNetworkManager.TestDecodeLoginFromCS( bytes )
+    --print(pb.tohex(bytes))
+    local decode_data = pb.decode('network.cs_login',bytes)
+    dump(decode_data)
+    print("TestDecodeLoginFromCS decode_data.account:"..decode_data.account)
+end

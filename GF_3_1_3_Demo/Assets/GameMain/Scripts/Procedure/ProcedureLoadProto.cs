@@ -15,6 +15,8 @@ using GameFramework.Resource;
 using System;
 using XLua;
 using UnityEngine;
+using System.IO;
+using ProtoBuf;
 
 /// <summary>
 /// 加载Proto流程
@@ -82,11 +84,32 @@ public  class ProcedureLoadProto:GameProcedureBase
         //调用lua方法，解析proto
         LuaTable luaTable =GameManager.Lua.GetClassLuaTable(m_LuaNetworkManagerName, m_ManagerClass);
         GameManager.Lua.CallLuaFunction(luaTable, "LoadProtoPb", m_CacheProtoPbData["login"]);
-        //测试lua中读单独文件读不到
-        //GameManager.Lua.CallLuaFunction(luaTable, "LoadProtoPbFile", "3rd/pb/login.txt");
-        //Test
+       
+        //lua中自己解析，自己序列化
         GameManager.Lua.CallLuaFunction(luaTable, "TestProto");
 
+        //if (Input.GetKeyDown(KeyCode.Alpha1))
+        {
+            //测试cs序列化，lua再反序列化
+            network.cs_login csLogin = new network.cs_login();
+            csLogin.account = "1234";
+            csLogin.password = "5678";
+            byte[] arrLoginBytes = null;
+            using (MemoryStream stream = new MemoryStream())
+            {
+                //跳过消息头长度（8）的位置开始序列化消息内容
+                stream.Position = 0;
+                Serializer.Serialize<network.cs_login>(stream, csLogin);
+                arrLoginBytes = stream.ToArray();
+
+                //在同一个地方测试反序列化，需要注意，上面序列化已经stream已经写了长度，流到了末尾
+                stream.Position = 0;
+                network.cs_login login2 = Serializer.Deserialize<network.cs_login>(stream);
+                Debug.Log("C#反序列化：" + login2.account);
+
+            }
+            GameManager.Lua.CallLuaFunction(luaTable, "TestDecodeLoginFromCS", arrLoginBytes);
+        }
         ChangeState<ProcedureMenu>(procedureOwner);
     }
 

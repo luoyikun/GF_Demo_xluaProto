@@ -18,7 +18,7 @@ _sym_db = _symbol_database.Default()
 DESCRIPTOR = _descriptor.FileDescriptor(
   name='login.proto',
   package='network',
-  serialized_pb=_b('\n\x0blogin.proto\x12\x07network\"-\n\x08\x63s_login\x12\x0f\n\x07\x61\x63\x63ount\x18\x01 \x02(\t\x12\x10\n\x08password\x18\x02 \x02(\t\"*\n\x08sc_login\x12\x0e\n\x06result\x18\x01 \x02(\r\x12\x0e\n\x06reason\x18\x02 \x02(\t')
+  serialized_pb=_b('\n\x0blogin.proto\x12\x07network\":\n\x08\x63s_login\x12\x0f\n\x07\x61\x63\x63ount\x18\x01 \x02(\t\x12\x10\n\x08password\x18\x02 \x02(\t\x12\x0b\n\x03\x61\x64\x64\x18\x03 \x02(\t\"*\n\x08sc_login\x12\x0e\n\x06result\x18\x01 \x02(\r\x12\x0e\n\x06reason\x18\x02 \x02(\t')
 )
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
@@ -46,6 +46,13 @@ _CS_LOGIN = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
+    _descriptor.FieldDescriptor(
+      name='add', full_name='network.cs_login.add', index=2,
+      number=3, type=9, cpp_type=9, label=2,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
   ],
   extensions=[
   ],
@@ -58,7 +65,7 @@ _CS_LOGIN = _descriptor.Descriptor(
   oneofs=[
   ],
   serialized_start=24,
-  serialized_end=69,
+  serialized_end=82,
 )
 
 
@@ -94,8 +101,8 @@ _SC_LOGIN = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=71,
-  serialized_end=113,
+  serialized_start=84,
+  serialized_end=126,
 )
 
 DESCRIPTOR.message_types_by_name['cs_login'] = _CS_LOGIN

@@ -1,3 +1,15 @@
+package.cpath = package.cpath .. ';E:/FileRecv/IDEA/plugins/EmmyLua/debugger/emmy/windows/x64/?.dll'
+local dbg = require('emmy_core')
+local function funcEmmy()
+	dbg.tcpListen('localhost', 9966)
+end
+pcall(funcEmmy)
+
+--package.cpath = package.cpath .. ';E:/FileRecv/IDEA/plugins/EmmyLua/debugger/emmy/windows/x64/?.dll'
+--local dbg = require('emmy_core')
+--dbg.tcpConnect('localhost', 9966)
+
+
 protoc = require "3rd/protoc"
 rapidjson = require "rapidjson" 
 pb = require "pb"
